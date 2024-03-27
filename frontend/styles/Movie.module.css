@@ -18,7 +18,13 @@
 }
 
 .name {
-	font-weight: 600;
+	/* font-weight: 700; */
+	font-size: 22px;
+}
+
+.date {
+	font-style: italic;
+	font-size: 12px;
 }
 
 .description {

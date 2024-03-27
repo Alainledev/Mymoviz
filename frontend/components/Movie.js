@@ -13,7 +13,7 @@ function Movie(props) {
   const stars = [];
   for (let i = 0; i < 10; i++) {
     let style = {};
-    if (i < props.voteAverage - 1) {
+    if (i < props.voteAverage ) {
       style = { 'color': '#f1c40f' };
     }
     stars.push(<FontAwesomeIcon key={i} icon={faStar} style={style} />);
@@ -62,12 +62,13 @@ function Movie(props) {
       <div >
         <div className={styles.textContainer}>
           <span className={styles.name}>{props.title}</span>
+          <span className={styles.date}> Release date {props.date}</span>
           <p className={styles.description} onClick={toggleDescription} >{overviewLength}</p>
         </div>
         <div className={styles.iconContainer}>
           <span className={styles.vote}>{stars} ({props.voteCount})</span>
           <span>{personalStars} ({personalNote})</span>
-          <span><FontAwesomeIcon icon={faVideo} onClick={() => handleWatchMovie()} style={videoIconStyle} className="watch" /> ({watchCount})</span>
+          {/* <span><FontAwesomeIcon icon={faVideo} onClick={() => handleWatchMovie()} style={videoIconStyle} className="watch" /> ({watchCount})</span> */}
           <span><FontAwesomeIcon icon={faHeart} onClick={() => handleLikeMovie()} style={heartIconStyle} className="like" /></span>
         </div>
       </div>

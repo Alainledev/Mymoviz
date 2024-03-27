@@ -52,6 +52,7 @@ function Home() {
     updateLikedMovies={updateLikedMovies} 
     isLiked={isLiked} 
     title={data.title} 
+    date={data.release_date}
     overview={data.overview} 
     poster={'https://image.tmdb.org/t/p/w500/'+data.poster_path} 
     voteAverage={data.vote_average} 
